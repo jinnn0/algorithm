@@ -4,7 +4,7 @@
 
 const array = [1, 3, 3, 4, 6, 7, 8, 9, 11, 12, 14, 15, 16, 17, 17, 18, 19, 20]; // length : 18
 
-// Time complexity : O(Log n), space complexity : O(1)
+// Time complexity : O(log n), space complexity : O(1)
 const binarySearch = (array, target) => {
   if (array[0] > target || array[array.length - 1] < target) return -1;
 
@@ -25,13 +25,13 @@ const binarySearch = (array, target) => {
     }
   }
 
-  return -1;
+  return false;
 };
 
 console.log(binarySearch(array, 7));
 
 // Recursive implementation
-// Time complexity : O(Log n), space complexity : O(Log n)
+// Time complexity : O(log n), space complexity : O(log n)
 const binarySearch = (array, target) => {
   return binarySearchHelper(array, target, 0, array.length - 1);
 };
